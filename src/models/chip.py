@@ -1,6 +1,5 @@
 class Chip:
     """Фишка казино с поддержкой арифметики"""
-
     def __init__(self, value: int) -> None:
         if value < 0:
             raise ValueError("Значение фишки должно быть неотрицательным")
