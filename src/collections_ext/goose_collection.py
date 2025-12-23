@@ -3,10 +3,8 @@ from collections.abc import Iterable, Iterator
 
 from src.models.goose import Goose
 
-
 class GooseCollection:
     """Списковая коллекция гусей с простым поиском"""
-
     def __init__(self, geese: Iterable[Goose] | None = None) -> None:
         self._geese: list[Goose] = list(geese) if geese is not None else []
 
