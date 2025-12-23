@@ -1,0 +1,19 @@
+[project]
+name = "labs"
+version = "0.1.0"
+description = "Casino and geese simulation for Lab 4"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest>=8.4.2",
+    "pytest-cov>=5.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
