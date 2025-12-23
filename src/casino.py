@@ -22,10 +22,8 @@ from src.models.chip import Chip
 from src.models.goose import Goose, HonkGoose, WarGoose
 from src.models.player import Player
 
-
 class Casino:
     """Состояние казино и набор событий"""
-
     def __init__(self, rng: random.Random) -> None:
         self.rng = rng
         self.players = PlayerCollection()
