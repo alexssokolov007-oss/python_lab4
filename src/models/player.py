@@ -1,6 +1,5 @@
 class Player:
     """Игрок казино с балансом"""
-
     def __init__(self, name: str, balance: int) -> None:
         self.name = name
         self.balance = balance
