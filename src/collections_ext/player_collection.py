@@ -3,10 +3,8 @@ from collections.abc import Iterable, Iterator
 
 from src.models.player import Player
 
-
 class PlayerCollection:
     """Списковая коллекция игроков"""
-
     def __init__(self, players: Iterable[Player] | None = None) -> None:
         self._players: list[Player] = list(players) if players is not None else []
 
