@@ -1,9 +1,7 @@
 from collections.abc import Iterator, MutableMapping
 
-
 class CasinoBalance(MutableMapping[str, int]):
     """Словарная коллекция балансов с логированием"""
-
     def __init__(self) -> None:
         self._data: dict[str, int] = {}
 
