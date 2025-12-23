@@ -80,7 +80,7 @@ def test_place_bet_loss_branch(capsys) -> None:
     casino = Casino(rng)
     casino.register_player(Player("A", 50))
     casino.register_goose(Goose("G", 1))
-    casino.rng.random = lambda: 0.9  # force loss
+    casino.rng.random = lambda: 0.9  # принудительно проигрыш
 
     casino._event_place_bet()
     out = capsys.readouterr().out

@@ -5,7 +5,7 @@ from src.models.goose import Goose
 
 
 class GooseCollection:
-    """List-like collection of geese with simple search helpers."""
+    """Списковая коллекция гусей с простым поиском"""
 
     def __init__(self, geese: Iterable[Goose] | None = None) -> None:
         self._geese: list[Goose] = list(geese) if geese is not None else []
@@ -41,12 +41,12 @@ class GooseCollection:
         del self._geese[index]
 
     def get_random(self, rng: random.Random, cls=None):
-        """Pick a random goose, optionally filtered by class."""
+        """Выбрать случайного гуся, при необходимости по типу"""
         candidates = [goose for goose in self._geese if cls is None or isinstance(goose, cls)]
         return rng.choice(candidates)
 
     def find_by_name(self, name: str) -> Goose | None:
-        """Find a goose by name."""
+        """Найти гуся по имени"""
         for goose in self._geese:
             if goose.name == name:
                 return goose

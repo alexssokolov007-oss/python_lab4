@@ -8,9 +8,9 @@ from src.models.player import Player
 
 def run_simulation(steps: int = 20, seed: int | None = None) -> None:
     """
-    Run a pseudo-random casino simulation.
+    Запуск псевдослучайной симуляции казино
 
-    When seed is provided, the same event sequence is produced.
+    При заданном seed последовательность событий повторяется
     """
     rng = random.Random(seed)
     casino = Casino(rng)

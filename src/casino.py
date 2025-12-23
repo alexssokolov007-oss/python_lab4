@@ -24,7 +24,7 @@ from src.models.player import Player
 
 
 class Casino:
-    """Casino simulation state and events."""
+    """Состояние казино и набор событий"""
 
     def __init__(self, rng: random.Random) -> None:
         self.rng = rng
@@ -141,7 +141,7 @@ class Casino:
         return events
 
     def run_step(self, step_index: int) -> None:
-        """Pick and execute one random event."""
+        """Выбрать и выполнить одно случайное событие"""
         event = self.rng.choice(self.available_events())
         self._log(f"\n-- Step {step_index} --")
         event()

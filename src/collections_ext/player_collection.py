@@ -5,7 +5,7 @@ from src.models.player import Player
 
 
 class PlayerCollection:
-    """List-like collection of players."""
+    """Списковая коллекция игроков"""
 
     def __init__(self, players: Iterable[Player] | None = None) -> None:
         self._players: list[Player] = list(players) if players is not None else []
@@ -44,7 +44,7 @@ class PlayerCollection:
         return rng.choice(self._players)
 
     def find_by_name(self, name: str) -> Player | None:
-        """Find a player by name."""
+        """Найти игрока по имени"""
         for player in self._players:
             if player.name == name:
                 return player

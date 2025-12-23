@@ -2,7 +2,7 @@ from collections.abc import Iterator, MutableMapping
 
 
 class CasinoBalance(MutableMapping[str, int]):
-    """Dictionary-like collection for balances with logging."""
+    """Словарная коллекция балансов с логированием"""
 
     def __init__(self) -> None:
         self._data: dict[str, int] = {}
@@ -25,7 +25,7 @@ class CasinoBalance(MutableMapping[str, int]):
         return len(self._data)
 
     def adjust(self, key: str, delta: int) -> int:
-        """Adjust balance by delta and return the new value."""
+        """Изменить баланс на delta и вернуть новое значение"""
         new_value = self._data.get(key, 0) + delta
         self[key] = new_value
         return new_value

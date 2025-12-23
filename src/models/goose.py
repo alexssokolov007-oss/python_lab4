@@ -3,14 +3,14 @@ from src.models.player import Player
 
 
 class Goose:
-    """Base goose with a name and honk volume."""
+    """Базовый гусь с именем и громкостью"""
 
     def __init__(self, name: str, honk_volume: int) -> None:
         self.name = name
         self.honk_volume = honk_volume
 
     def __add__(self, other: "Goose") -> "Goose":
-        """Merge two geese into a flock with boosted volume."""
+        """Объединить двух гусей в стаю с усиленной громкостью"""
         if not isinstance(other, Goose):
             raise TypeError("Can only add another Goose.")
         combined_volume = max(self.honk_volume, other.honk_volume) + MERGE_HYPE_BONUS
@@ -21,16 +21,16 @@ class Goose:
 
 
 class WarGoose(Goose):
-    """Goose that attacks players."""
+    """Гусь, который атакует игроков"""
 
     def attack(self, player: Player, damage: int) -> int:
-        """Attack a player and return the actual damage dealt."""
+        """Атаковать игрока и вернуть фактически нанесенный урон"""
         return player.withdraw(damage)
 
 
 class HonkGoose(Goose):
-    """Goose that can honk to scare players."""
+    """Гусь, который может кричать и пугать игроков"""
 
     def __call__(self, player: Player, impact: int) -> int:
-        """Honk at a player and return the amount lost."""
+        """Крикнуть на игрока и вернуть величину потерь"""
         return player.withdraw(impact)

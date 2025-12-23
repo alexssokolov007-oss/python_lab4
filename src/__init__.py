@@ -1,1 +1,1 @@
-"""Casino and geese simulation package."""
+"""Пакет симуляции казино и гусей"""
