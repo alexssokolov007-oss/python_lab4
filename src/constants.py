@@ -1,15 +1,15 @@
 DEFAULT_PLAYER_BALANCE: int = 100
 DEFAULT_PLAYERS = (
-    ('Ramzes', DEFAULT_PLAYER_BALANCE),
-    ('Afoninje', DEFAULT_PLAYER_BALANCE),
-    ('Miracle', DEFAULT_PLAYER_BALANCE),
+    ('Megaknight', DEFAULT_PLAYER_BALANCE),
+    ('P.E.K.K.A', DEFAULT_PLAYER_BALANCE),
+    ('Musketeer', DEFAULT_PLAYER_BALANCE),
 )
 
 DEFAULT_GOOSE = (
-    ('Monkey King', 8, 'war'),
-    ('Earth Shaker', 5, 'honk'),
-    ('Invoker', 6, 'war'),
-    ('Shadow Fiend', 7, 'honk'),
+    ('Slark', 9, 'war'),
+    ('Anti-mage', 4, 'honk'),
+    ('Jager', 7, 'war'),
+    ('Troll', 6, 'honk'),
 )
 
 MIN_BET: int = 5
